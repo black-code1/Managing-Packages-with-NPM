@@ -6,7 +6,7 @@ console.log("Hello World")
 //app.get("/", (req, res) => res.send("Hello Express"))
 
 const absolutePath = __dirname + "/views/index.html"
-console.log()
+console.log(absolutePath)
 app.get("/", (req, res) => res.sendFile(absolutePath))
 
 
