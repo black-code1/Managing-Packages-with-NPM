@@ -1,6 +1,13 @@
 var express = require('express');
 var app = express();
 
+
+
+app.use((req, res, next) => {
+  let string = req.method + " " + req.path + " - " + req.ip;
+  console.log(string)
+  next()
+})
 console.log("Hello World")
 
 app.get("/", (req, res) => res.send("Hello Express"))
